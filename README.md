@@ -48,7 +48,7 @@ struct ContentView: View {
 
 ## Drag Handle
 
-Mark a single view inside a row with `.dragHandle()` to restrict reordering to that view. The rest of the row is then free for taps, scrolling, or other gestures.
+Mark a single view inside a row with `.dragHandle()` to restrict dragging to that view. The rest of the row is then free for taps, scrolling, or other gestures.
 
 ```swift
 private struct CardView: View {
@@ -66,7 +66,6 @@ private struct CardView: View {
                 .dragHandle()
         }
         .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
         .background(card.color, in: .rect(cornerRadius: 16))
     }
 }
@@ -130,13 +129,13 @@ private struct CardView: View {
 
 ## Drag Scale
 
-`ReorderableVStack` applies a subtle scale-up to the dragged row (default `1.02`). Override it with `.dragScale(_:)` on the stack:
+`ReorderableVStack` applies a subtle scale-up to the dragged row`. Override it with `.dragScale(_:)` on the stack:
 
 ```swift
 ReorderableVStack($cards) { card in
     CardView(card: card)
 }
-.dragScale(1.05)
+.dragScale(1)
 ```
 
 ## License
