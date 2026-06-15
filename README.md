@@ -1,6 +1,6 @@
 # ReorderableVStack
 
-A drag-to-reorder vertical stack for SwiftUI. Works around pitfalls with existing libraries and the `reorderable` API.
+A drag-to-reorder vertical stack for SwiftUI. Works around pitfalls with existing libraries and the `reorderable` API. Also supports custom drag handles (any view or SF Symbol).
 
 ## Requirements
 
